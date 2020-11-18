@@ -60,6 +60,7 @@ button {
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-basis: 25%;
+    text-align: center;
     
 
 }
