@@ -16,10 +16,10 @@ h1 {
 }
 
 p {
-    background-color: rgba(255, 255, 255, 0.404);
-    margin-top: 1rem;
+    margin: 0.2rem;
     font-size: 1rem;
     text-align: left;
+    
 }
 
 input {
@@ -27,10 +27,10 @@ input {
     height: 2rem;
     border: none;
     margin: 0.5rem;
-  
-    background: white;
     border: 1px dashed grey;
     border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+
     
 }
 button {
@@ -62,4 +62,23 @@ button {
     flex-basis: 25%;
     
 
+}
+
+.info {
+    margin-bottom: 0.5rem;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.one {
+    width: 7.2rem;
+}
+.two {
+    width: 9.5rem;
+}
+.three {
+    width: 5rem;
+}
+.four {
+    width: 5.4rem;
 }
