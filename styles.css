@@ -12,13 +12,13 @@ h1 {
     text-align: center;
     /* background-color: white; */
     font-family: 'Kaushan Script', cursive;
+    color: rgb(16, 16, 58);
 }
 
 p {
     margin: 0.2rem;
     font-size: 1rem;
     text-align: left;
-    
 }
 
 input {
@@ -61,19 +61,21 @@ button {
 
 .info {
     margin-bottom: 0.5rem;
+    margin: 1rem 0;
     width: auto;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    padding: 0.2rem 0;
+
 }
 
-.one {
-    width: 7.2rem;
+/* .two {
+    width: 11rem;
 }
-.two {
-    width: 9.5rem;
-}
+
 .three {
     width: 5rem;
 }
 .four {
     width: 5.4rem;
-}
+} */
