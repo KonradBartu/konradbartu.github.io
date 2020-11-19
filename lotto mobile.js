@@ -1,7 +1,7 @@
 // Vibrate on button click
 const button = document.querySelector('.btn')
 button.addEventListener('click', function () {
-    window.navigator.vibrate(10);
+    window.navigator.vibrate(100);
 })
 
 let match;
