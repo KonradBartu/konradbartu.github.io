@@ -1,15 +1,14 @@
+let match;
+let userArray = [];
+let funds = 10;
+
 // Vibrate on button click
 const button = document.querySelector('.btn')
 button.addEventListener('click', function () {
     window.navigator.vibrate(30);
 })
 
-let match = 0;
-let funds = 10;
-let userArray = [];
-let numberArray = [];
-
-
+// Input fields
 let inputs = document.querySelector('.inputs')
 let f1 = document.querySelector('.f1');
 let f2 = document.querySelector('.f2');
@@ -46,7 +45,7 @@ f1.addEventListener('change', function () {
         timeouts();
     }
     numberArray = userArray.map(parse)
-    console.log(numberArray);
+
 }
 );
 
@@ -63,7 +62,7 @@ f2.addEventListener('change', function () {
         timeouts();
     }
     numberArray = userArray.map(parse)
-    console.log(numberArray);
+
 }
 );
 
@@ -80,7 +79,7 @@ f3.addEventListener('change', function () {
         timeouts();
     }
     numberArray = userArray.map(parse)
-    console.log(numberArray);
+
 }
 );
 
@@ -97,7 +96,7 @@ f4.addEventListener('change', function () {
         timeouts();
     }
     numberArray = userArray.map(parse)
-    console.log(numberArray);
+
 }
 );
 
@@ -114,7 +113,7 @@ f5.addEventListener('change', function () {
         timeouts();
     }
     numberArray = userArray.map(parse)
-    console.log(numberArray);
+
 }
 );
 
@@ -148,7 +147,16 @@ document.querySelector('.btn').addEventListener('click', function () {
             winSet.add(Math.floor(Math.random() * 49) + 1)
         };
         let winSetToArray = Array.from(winSet).slice(0, 6);
-        console.log(winSetToArray);
+        winSetToArray.sort(function(num1, num2) {
+            if (num1 > num2) {
+                return 1;
+            } else if (num2 > num1) {
+                return -1;
+            } else {
+            return 0;
+            }
+        })
+
 
         // Check if winning numbers contain user's numbers.
         for (let index = 0; index < 7; index++) {
@@ -156,6 +164,22 @@ document.querySelector('.btn').addEventListener('click', function () {
                 match++;
                 console.log(match);
             }
+        };
+        // Prize breakdown.
+        if (match == 2) {
+            funds += 2;
+            console.log('zastrzyk gotowki + 2');
+        } else if (match == 3) {
+            funds += 138;
+            console.log('zastrzyk gotowki + 138');
+        } else if (match == 4) {
+            funds += 724;
+        } else if (match == 5) {
+            funds += 19820;
+        } else if (match == 6) {
+            funds += 1388525
+            console.log('zastrzyk gotowki + 1388525');
+
         };
         document.querySelector('.two').innerText = 'Zwycięskie numery:' + ' ' + winSetToArray.join(', ');
         document.querySelector('.three').innerText = 'Trafienia:' + ' ' + match;
@@ -168,33 +192,49 @@ document.querySelector('.btn').addEventListener('click', function () {
         }, 4000);
     }
 
-}
-);
- 
-// Prize breakdown.
-    if (match == 2) {
-        funds += 2;
-    } else if (match == 3){
-        funds += 138;
-    }else if (match == 4){
-        funds += 724;
-    }else if (match == 5){
-        funds += 19820;
-    }else if (match == 6){
-        funds += 1388525
-    };
 
 
-// Winning alerts.
-// if (match = 1) {
-//     document.querySelector('h1').innerText = `Masz ${match} trafienie!`;
-// } else if (match >= 2 && match <= 4) {
-//     document.querySelector('h1').innerText = `Masz ${match} trafienia!`;
-// } else if (match > 4 && match <= 6) {
-//     document.querySelector('h1').innerText = `Masz ${match} trafień!`;
-// } else {
-//     document.querySelector('h1').innerText = 'Brak trafień 😢';
-// }
+
+    // Winning alerts.
+    // if (match > 0 && match < 2){
+    //     alert(`Congratulations, you have ${match} matching number!`);
+
+    // }   else if (match >= 2 && match < 7){
+    //     alert(`Congratulations, you have ${match} matching numbers!`);
+    // }  
+    //     else {
+    //     alert(`You do not have any matching numbers.`);
+    // }
+
+
+
+    // // Winning alerts.
+    // if (match = 1) {
+    //     document.querySelector('h1').innerText = `Masz ${match} trafienie!`;
+    // } else if (match >= 2 && match <= 4) {
+    //     document.querySelector('h1').innerText = `Masz ${match} trafienia!`;
+    // } else if (match > 4 && match <= 6) {
+    //     document.querySelector('h1').innerText = `Masz ${match} trafień!`;
+    // } else {
+    //     document.querySelector('h1').innerText = 'Brak trafień 😢';
+    // }
+
+    // // Prize breakdown.
+    //     if (match == 2) {
+    //         funds += 2;
+    //     } else if (match == 3){
+    //         funds += 138;
+    //     }else if (match == 4){
+    //         funds += 724;
+    //     }else if (match == 5){
+    //         funds += 19820;
+    //     }else if (match == 6){
+    //         funds += 1388525
+    //     };
+
+});
+
+
 
 
 // document.getElementById('usr').innerHTML = '<font color="black">Your numbers:</font>' + '<br>' + userArrayNumber.join(', ');
