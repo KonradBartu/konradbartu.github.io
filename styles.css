@@ -46,7 +46,6 @@ button {
     
     width: 100%;
     display: flex;
-    margin: 2rem auto;
     flex-flow: column wrap;
     justify-content: center;
 
@@ -61,7 +60,7 @@ button {
 
 .info {
     width: auto;
-    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color: rgba(255, 255, 255, 0.2);
     font-size: 1rem;
     /* padding: 0.2rem 0; */
 
