@@ -12,7 +12,7 @@ let matchSixes = 0;
 // Vibrate on button click
 const button = document.querySelector('.btn')
 button.addEventListener('click', function () {
-    window.navigator.vibrate(60);
+    window.navigator.vibrate(100);
 })
 
 // Input fields
