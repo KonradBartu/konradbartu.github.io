@@ -12,11 +12,11 @@ let matchFives = 0;
 let matchSixes = 0;
 
 
-// Vibrate on button click
-const button = document.querySelector('.btn')
-button.addEventListener('click', function () {
-    window.navigator.vibrate(500);
-})
+// // Vibrate on button click
+// const button = document.querySelector('.btn')
+// button.addEventListener('click', function () {
+    
+// })
 
 // Input fields
 let inputs = document.querySelector('.inputs')
@@ -146,6 +146,7 @@ f6.addEventListener('change', function () {
 
 // Button click
 document.querySelector('.btn').addEventListener('click', function () {
+    window.navigator.vibrate(1000);
     match = 0;
     funds -= 2;
     spent += 2;
