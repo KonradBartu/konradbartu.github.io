@@ -1,11 +1,18 @@
 let match;
 let userArray = [];
 let funds = 10;
+let matchOnes = 0;
+let matchTwos = 0;
+let matchThrees = 0;
+let matchFours = 0;
+let matchFives = 0;
+let matchSixes = 0;
+
 
 // Vibrate on button click
 const button = document.querySelector('.btn')
 button.addEventListener('click', function () {
-    window.navigator.vibrate(30);
+    window.navigator.vibrate(60);
 })
 
 // Input fields
@@ -162,28 +169,35 @@ document.querySelector('.btn').addEventListener('click', function () {
         for (let index = 0; index < 7; index++) {
             if (winSetToArray.includes(numberArray[index])) {
                 match++;
-                console.log(match);
+                // console.log(match);
             }
         };
         // Prize breakdown.
-        if (match == 2) {
+        if (match == 1) {
+            matchOnes ++;
+            console.log('match ones = ' + matchOnes);
+        }
+        else if (match == 2) {
             funds += 2;
-            console.log('zastrzyk gotowki + 2');
+            matchTwos ++;
         } else if (match == 3) {
             funds += 138;
-            console.log('zastrzyk gotowki + 138');
+            matchThrees ++;
         } else if (match == 4) {
             funds += 724;
+            matchFours ++;
         } else if (match == 5) {
             funds += 19820;
+            matchFives ++;
         } else if (match == 6) {
             funds += 1388525
-            console.log('zastrzyk gotowki + 1388525');
-
+            matchSixes ++;
+            ;
+      
         };
         document.querySelector('.two').innerText = 'Zwycięskie numery:' + ' ' + winSetToArray.join(', ');
         document.querySelector('.three').innerText = 'Trafienia:' + ' ' + match;
-        document.querySelector('.four').innerText = 'Pieniądze:' + ' ' + funds;
+        document.querySelector('.four').innerText = `Balans:${funds} \n Wydane:${match}   Wygrane:${match}`;
 
     } else {
         document.querySelector('h1').innerText = 'Uzupełnij brakujące pola'
