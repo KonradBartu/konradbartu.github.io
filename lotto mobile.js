@@ -1,6 +1,9 @@
+let spent = 0;
+let wins = 0;
 let match;
 let userArray = [];
 let funds = 10;
+let drawsNumber = 0;
 let matchOnes = 0;
 let matchTwos = 0;
 let matchThrees = 0;
@@ -9,11 +12,11 @@ let matchFives = 0;
 let matchSixes = 0;
 
 
-// Vibrate on button click
-const button = document.querySelector('.btn')
-button.addEventListener('click', function () {
-    window.navigator.vibrate(100);
-})
+// // Vibrate on button click
+// const button = document.querySelector('.btn')
+// button.addEventListener('click', function () {
+//     window.navigator.vibrate(100);
+// })
 
 // Input fields
 let inputs = document.querySelector('.inputs')
@@ -145,6 +148,8 @@ f6.addEventListener('change', function () {
 document.querySelector('.btn').addEventListener('click', function () {
     match = 0;
     funds -= 2;
+    spent += 2;
+    drawsNumber++;
     window.navigator.vibrate(100);
     if (
         typeof numberArray[0] === 'number' && isNaN(numberArray[0]) === false && typeof numberArray[1] === 'number' && isNaN(numberArray[1]) === false && typeof numberArray[2] === 'number' && isNaN(numberArray[2]) === false && typeof numberArray[3] === 'number' && isNaN(numberArray[3]) === false && typeof numberArray[4] === 'number' && isNaN(numberArray[4]) === false && typeof numberArray[5] === 'number' && isNaN(numberArray[5]) === false) {
@@ -155,13 +160,13 @@ document.querySelector('.btn').addEventListener('click', function () {
             winSet.add(Math.floor(Math.random() * 49) + 1)
         };
         let winSetToArray = Array.from(winSet).slice(0, 6);
-        winSetToArray.sort(function(num1, num2) {
+        winSetToArray.sort(function (num1, num2) {
             if (num1 > num2) {
                 return 1;
             } else if (num2 > num1) {
                 return -1;
             } else {
-            return 0;
+                return 0;
             }
         })
 
@@ -170,36 +175,43 @@ document.querySelector('.btn').addEventListener('click', function () {
         for (let index = 0; index < 7; index++) {
             if (winSetToArray.includes(numberArray[index])) {
                 match++;
-                // console.log(match);
             }
         };
         // Prize breakdown.
         if (match == 1) {
-            matchOnes ++;
-            console.log('match ones = ' + matchOnes);
+            matchOnes++;
         }
         else if (match == 2) {
             funds += 2;
-            matchTwos ++;
+            wins += 2;
+            matchTwos++;
         } else if (match == 3) {
             funds += 138;
-            matchThrees ++;
+            wins += 138;
+            matchThrees++;
         } else if (match == 4) {
             funds += 724;
-            matchFours ++;
+            wins += 724;
+            matchFours++;
         } else if (match == 5) {
             funds += 19820;
-            matchFives ++;
+            wins += 19820;
+            matchFives++;
         } else if (match == 6) {
             funds += 1388525
-            matchSixes ++;
+            wins += 1388525
+            matchSixes++;
             ;
-      
-        };
-        document.querySelector('.two').innerText = 'Zwycięskie numery:' + ' ' + winSetToArray.join(', ');
-        document.querySelector('.three').innerText = 'Trafienia:' + ' ' + match;
-        document.querySelector('.four').innerText = `Balans:${funds} \n Wydane:${match}   Wygrane:${match}`;
 
+        };
+        document.querySelector('.one').innerText = `Zwycięskie numery: ${winSetToArray.join(', ')}`;
+        document.querySelector('.two').innerText = `Trafienia: ${match}`;
+        document.querySelector('.three').innerText = `Balans: ${funds}`;
+        document.querySelector('.four').innerText = `Wydane: ${spent}`;
+        document.querySelector('.five').innerText = `Wygrane: ${wins}`;
+        document.querySelector('.seven').innerText = `Liczba losowań: ${drawsNumber} `
+        document.querySelector('.six').innerText = `Trafienia ogółem: 1*${matchOnes}, 2*${matchTwos}, 3*${matchThrees}, 4*${matchFours}, 5*${matchFives}, 6*${matchSixes}`;
+        
     } else {
         document.querySelector('h1').innerText = 'Uzupełnij brakujące pola'
         setTimeout(() => {
