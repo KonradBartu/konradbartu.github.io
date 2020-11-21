@@ -65,7 +65,9 @@ button {
     /* padding: 0.2rem 0; */
 
 }
-
+.btn {
+    align-self: center;
+}
 /* .two {
     width: 11rem;
 }
