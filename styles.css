@@ -9,11 +9,12 @@ img {
 
 }
 h1 {
-    text-align: center;
+    align-self: center;
     /* background-color: white; */
     font-family: 'Kaushan Script', cursive;
     color: rgb(16, 16, 58);
-    margin-bottom: 0.5rem;
+    margin: 1rem 0.4rem 1rem 0;
+    
 }
 
 p {
