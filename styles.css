@@ -19,8 +19,16 @@ p {
     margin: 0.2rem;
     font-size: 1rem;
     text-align: left;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-
+/* .three { */
+    /* font-weight: 550; */
+    /* color: rgb(16, 16, 58); */
+/* } */
+/* .one { */
+    /* font-weight: 600; */
+    /* font-style: italic; */
+/* } */
 input {
     width: 2rem;
     height: 2rem;
@@ -78,3 +86,7 @@ button {
 .four {
     width: 5.4rem;
 } */
+
+.one {
+    margin-top: 1rem;
+}

@@ -146,14 +146,14 @@ f6.addEventListener('change', function () {
 
 // Button click
 document.querySelector('.btn').addEventListener('click', function () {
-    window.navigator.vibrate(30);
-    match = 0;
-    funds -= 2;
-    spent += 2;
-    drawsNumber++;
+    window.navigator.vibrate(60);
+    
     if (
         typeof numberArray[0] === 'number' && isNaN(numberArray[0]) === false && typeof numberArray[1] === 'number' && isNaN(numberArray[1]) === false && typeof numberArray[2] === 'number' && isNaN(numberArray[2]) === false && typeof numberArray[3] === 'number' && isNaN(numberArray[3]) === false && typeof numberArray[4] === 'number' && isNaN(numberArray[4]) === false && typeof numberArray[5] === 'number' && isNaN(numberArray[5]) === false) {
-
+        match = 0;
+        funds -= 2;
+        spent += 2;
+        drawsNumber++;
         // // Array created with random winning numbers (between 1-49). Non-repeatable set of numbers.
         let winSet = new Set();
         for (let index = 0; index < 30; index++) {
