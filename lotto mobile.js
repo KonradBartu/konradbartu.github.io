@@ -19,7 +19,7 @@ let matchSixes = 0;
 // })
 
 // Input fields
-let inputs = document.querySelector('.inputs')
+// let inputs = document.querySelector('.inputs')
 let f1 = document.querySelector('.f1');
 let f2 = document.querySelector('.f2');
 let f3 = document.querySelector('.f3');
