@@ -146,7 +146,7 @@ f6.addEventListener('change', function () {
 
 // Button click
 document.querySelector('.btn').addEventListener('click', function () {
-    window.navigator.vibrate(1000);
+    window.navigator.vibrate(60);
     match = 0;
     funds -= 2;
     spent += 2;
