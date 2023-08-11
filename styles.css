@@ -100,7 +100,7 @@ body {
         color: rgb(16, 16, 58);
         margin: 1rem 0.5rem 1rem 0;
     }
-    p, ul {
+    p {
         margin: 0.2rem;
         font-size: 1.5rem;
         text-align: left;
@@ -146,5 +146,14 @@ body {
     .one {
         margin-top: 1rem;
     }
+    .green {
+        background-color: rgba(120, 255, 165, 0.2);
+    }
 
+    ul {
+        margin-top: 0.25rem;
+    }
+    ul li {
+        font-size: 0.9rem;
+    }
 }

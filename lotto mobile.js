@@ -20,7 +20,7 @@ let f4 = document.querySelector(".f4");
 let f5 = document.querySelector(".f5");
 let f6 = document.querySelector(".f6");
 
-function timeouts() {
+function timeoutsWrongNumber() {
   setTimeout(() => {
     document.querySelector("h1").innerText =
       "Wprowadź liczbę między 1-49. Nie powtarzaj poprzednich.";
@@ -29,6 +29,18 @@ function timeouts() {
     document.querySelector("h1").innerText = "Wprowadź swoje numery";
   }, 5000);
 }
+
+function timeoutsWinAlert() {
+  setTimeout(() => {
+    document.querySelector("h1").innerText =
+      `Trafione ${match} liczby!`;
+  }, 10);
+  setTimeout(() => {
+    document.querySelector("h1").innerText = "Wprowadź swoje numery";
+  }, 2000);
+  window.navigator.vibrate(60);
+}
+
 
 function parse(arg) {
   return parseInt(arg);
@@ -48,7 +60,7 @@ f1.addEventListener("change", function () {
     userNumber1.value = "";
     userArray[0] = "";
     f1.value = "";
-    timeouts();
+    timeoutsWrongNumber();
   }
   numberArray = userArray.map(parse);
 });
@@ -67,7 +79,7 @@ f2.addEventListener("change", function () {
     userNumber2.value = "";
     userArray[1] = "";
     f2.value = "";
-    timeouts();
+    timeoutsWrongNumber();
   }
   numberArray = userArray.map(parse);
 });
@@ -86,7 +98,7 @@ f3.addEventListener("change", function () {
     userNumber3.value = "";
     userArray[2] = "";
     f3.value = "";
-    timeouts();
+    timeoutsWrongNumber();
   }
   numberArray = userArray.map(parse);
 });
@@ -105,7 +117,7 @@ f4.addEventListener("change", function () {
     userNumber4.value = "";
     userArray[3] = "";
     f4.value = "";
-    timeouts();
+    timeoutsWrongNumber();
   }
   numberArray = userArray.map(parse);
 });
@@ -124,7 +136,7 @@ f5.addEventListener("change", function () {
     userNumber5.value = "";
     userArray[4] = "";
     f5.value = "";
-    timeouts();
+    timeoutsWrongNumber();
   }
   numberArray = userArray.map(parse);
 });
@@ -143,7 +155,7 @@ f6.addEventListener("change", function () {
     userNumber6.value = "";
     userArray[5] = "";
     f6.value = "";
-    timeouts();
+    timeoutsWrongNumber();
   }
   numberArray = userArray.map(parse);
   console.log(numberArray);
@@ -198,6 +210,7 @@ if (
       funds += 2;
       wins += 2;
       matchTwos++;
+      timeoutsWinAlert();
     } else if (match == 3) {
       funds += 138;
       wins += 138;
