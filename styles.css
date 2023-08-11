@@ -100,7 +100,7 @@ body {
         color: rgb(16, 16, 58);
         margin: 1rem 0.5rem 1rem 0;
     }
-    p {
+    p, ul {
         margin: 0.2rem;
         font-size: 1.5rem;
         text-align: left;
