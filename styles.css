@@ -73,6 +73,13 @@ body {
     .green {
         background-color: rgba(120, 255, 165, 0.2);
     }
+
+    ul {
+        margin-top: 0.25rem;
+    }
+    ul li {
+        font-size: 0.9rem;
+    }
 }
 
 /* Monitors */
