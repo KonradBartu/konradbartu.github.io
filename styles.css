@@ -70,6 +70,9 @@ body {
     .one {
         margin-top: 1rem;
     }
+    .green {
+        background-color: rgba(120, 255, 165, 0.2);
+    }
 }
 
 /* Monitors */
