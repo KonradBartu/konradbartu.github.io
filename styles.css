@@ -49,6 +49,8 @@ body {
         background-color: gold;
         font-family: 'Roboto Condensed', sans-serif;
         box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+        color: rgb(16, 16, 58);
+
         
 
     }
@@ -145,6 +147,8 @@ body {
         font-size: 2rem;
         background-color: gold;
         font-family: 'Roboto Condensed', sans-serif;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+        color: rgb(16, 16, 58);
 
     }
     .wrapper {
