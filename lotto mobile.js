@@ -38,7 +38,7 @@ function timeoutsWinAlert() {
   setTimeout(() => {
     document.querySelector("h1").innerText = "Wprowadź swoje numery";
   }, 2000);
-  window.navigator.vibrate(60);
+  window.navigator.vibrate(1000);
 }
 
 
