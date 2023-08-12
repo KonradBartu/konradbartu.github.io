@@ -211,7 +211,8 @@ if (
       wins += 2;
       matchTwos++;
       // timeoutsWinAlert();
-      alert(`Trafione ${match} liczby!`)
+      alert(`Trafione ${match} liczby!`);
+      matchTwos = 0;
     } else if (match == 3) {
       funds += 138;
       wins += 138;
