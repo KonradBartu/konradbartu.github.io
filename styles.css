@@ -21,6 +21,16 @@ body {
         color: rgb(16, 16, 58);
         margin: 1rem 0.5rem 1rem 0;
     }
+    h2 {
+        text-align: center;
+        align-self: center;
+        /* background-color: white; */
+        font-family: 'Kaushan Script', cursive;
+        /* font-size: 2.2rem; */
+        color: rgb(16, 16, 58);
+        margin: 1rem 0.5rem 1rem 0;
+
+    }
     p {
         margin: 0.2rem;
         font-size: 1rem;
@@ -120,6 +130,7 @@ body {
         color: rgb(16, 16, 58);
         margin: 1rem 0.5rem 1rem 0;
     }
+    
     p {
         margin: 0.2rem;
         font-size: 1.5rem;
