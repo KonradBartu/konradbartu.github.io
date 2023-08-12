@@ -48,6 +48,8 @@ body {
         font-size: 2rem;
         background-color: gold;
         font-family: 'Roboto Condensed', sans-serif;
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+        
 
     }
     .wrapper {
