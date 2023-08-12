@@ -10,7 +10,7 @@ let matchThrees = 0;
 let matchFours = 0;
 let matchFives = 0;
 let matchSixes = 0;
-
+let luckyHits = 0;
 
 // Input fields
 let f1 = document.querySelector(".f1");
@@ -205,59 +205,54 @@ if (
         match++;
       }
     }
-    // Prize breakdown.
+    // Prize breakdown. (MatchTwo-Six for tests only)
       if (match == 2) {
       funds += 2;
       wins += 2;
       matchTwos++;
       // timeoutsWinAlert();
       alert(`Trafione ${match} liczby!`);
-      matchTwos = 0;
     } else if (match == 3) {
       funds += 138;
       wins += 138;
-      matchTwos = 0;
       matchThrees++;
+      alert(`Trafione ${match} liczby!`);
     } else if (match == 4) {
       funds += 724;
       wins += 724;
       matchThrees = 0;
       matchFours++;
+      alert(`Trafione ${match} liczby!`);
     } else if (match == 5) {
       funds += 19820;
       wins += 19820;
       matchFours = 0;
       matchFives++;
+      alert(`Trafione ${match} liczb!`);
     } else if (match == 6) {
       funds += 1388525;
       wins += 1388525;
       matchFives = 0
       matchSixes++;
+      alert(`Trafione ${match} liczb!`);
     }
-    document.querySelector(
-      ".one"
-    ).innerText = `Zwycięskie numery: ${winSetToArray.join(", ")}`;
-    document.querySelector(".two").innerText = `Trafienia: ${match}`;
+    document.querySelector(".one").innerText = `Zwycięskie numery: ${winSetToArray.join(", ")}`;
     document.querySelector(".three").innerText = `Budżet: ${funds}`;
     document.querySelector(".four").innerText = `Wydane: ${spent}`;
     document.querySelector(".five").innerText = `Wygrane: ${wins}`;
-    document.querySelector(
-      ".seven"
-    ).innerText = `Liczba losowań: ${drawsNumber} `;
-    // document.querySelector(
-    //   ".six"
-    // ).innerText = `Trafienia (aktualne): 1*${matchOnes}, 2*${matchTwos}, 3*${matchThrees}, 4*${matchFours}, 5*${matchFives}, 6*${matchSixes}`;
+    document.querySelector(".seven").innerText = `Liczba losowań: ${drawsNumber} `;
+    document.querySelector(".six").innerText = `Trafienia Ogółem: 2*${matchTwos}, 3*${matchThrees}, 4*${matchFours}, 5*${matchFives}, 6*${matchSixes}`;
   } else {
     document.querySelector("h1").innerText = "Uzupełnij brakujące pola";
     setTimeout(() => {
       document.querySelector("h1").innerText = "Wprowadź swoje numery";
     }, 4000);
   }
-  matchTwos = 0;
-  matchThrees = 0;
-  matchFours = 0;
-  matchFives = 0;
-  matchSixes = 0;
- 
+  // matchTwos = 0;
+  // matchThrees = 0;
+  // matchFours = 0;
+  // matchFives = 0;
+  // matchSixes = 0;
+  match = 0;
 
 });
