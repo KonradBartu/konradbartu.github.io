@@ -10,7 +10,6 @@ let matchThrees = 0;
 let matchFours = 0;
 let matchFives = 0;
 let matchSixes = 0;
-let luckyHits = 0;
 
 // Input fields
 let f1 = document.querySelector(".f1");
@@ -205,6 +204,7 @@ if (
       if (winSetToArray.includes(numberArray[index])) {
         match++;
       }
+      // console.log(winSetToArray); test
     }
     // Prize breakdown. (MatchTwo-Six for tests only)
       if (match == 2) {
@@ -255,5 +255,6 @@ if (
   // matchFives = 0;
   // matchSixes = 0;
   match = 0;
-
+ 
+  
 });
