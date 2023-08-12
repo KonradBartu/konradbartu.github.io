@@ -130,11 +130,15 @@ body {
         color: rgb(16, 16, 58);
         margin: 1rem 0.5rem 1rem 0;
     }
-    p {
-        margin: 0.2rem;
-        font-size: 1rem;
-        text-align: left;
+    .title {
+        text-align: center;
+        align-self: center;
+        /* background-color: white; */
         font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1rem;
+        color: black;
+        margin: 0;
+
     }
     p {
         margin: 0.2rem;
