@@ -163,7 +163,7 @@ f6.addEventListener("change", function () {
 
 // Button click. Vibrate on click
 document.querySelector(".btn").addEventListener("click", function () {
-  window.navigator.vibrate(60);
+  window.navigator.vibrate(1000);
 
 if (
     typeof numberArray[0] === "number" &&
