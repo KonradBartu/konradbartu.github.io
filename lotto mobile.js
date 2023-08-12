@@ -243,9 +243,9 @@ if (
     document.querySelector(
       ".seven"
     ).innerText = `Liczba losowań: ${drawsNumber} `;
-    document.querySelector(
-      ".six"
-    ).innerText = `Trafienia (aktualne): 1*${matchOnes}, 2*${matchTwos}, 3*${matchThrees}, 4*${matchFours}, 5*${matchFives}, 6*${matchSixes}`;
+    // document.querySelector(
+    //   ".six"
+    // ).innerText = `Trafienia (aktualne): 1*${matchOnes}, 2*${matchTwos}, 3*${matchThrees}, 4*${matchFours}, 5*${matchFives}, 6*${matchSixes}`;
   } else {
     document.querySelector("h1").innerText = "Uzupełnij brakujące pola";
     setTimeout(() => {
