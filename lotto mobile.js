@@ -33,11 +33,12 @@ function timeoutsWinAlert() {
   setTimeout(() => {
     document.querySelector("h1").innerText =
       `Trafione ${match} liczby!`;
+  window.navigator.vibrate(60);
   }, 10);
   setTimeout(() => {
     document.querySelector("h1").innerText = "Wprowadź swoje numery";
   }, 2000);
-  window.navigator.vibrate(30);
+  window.navigator.vibrate(60);
 }
 
 
@@ -163,7 +164,7 @@ f6.addEventListener("change", function () {
 // Button click. Vibrate on click
 document.querySelector(".btn").addEventListener("click", function () {
   // window.navigator?
-  navigator.vibrate(30);
+  navigator.vibrate(60);
 
 if (
     typeof numberArray[0] === "number" &&
